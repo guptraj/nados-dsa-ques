@@ -5,12 +5,11 @@ public class ps {
     public static Scanner scn = new Scanner(System.in);
 
     public static boolean isPalindrome(String s) {
-        
-        int i = 0;
-        int j = s.length()-1;
 
-        while(i<=j)
-        {
+        int i = 0;
+        int j = s.length() - 1;
+
+        while (i <= j) {
             if (s.charAt(i) != s.charAt(j)) {
                 return false;
 
@@ -18,9 +17,9 @@ public class ps {
             i++;
             j--;
         }
-        
+
         return true;
-        
+
     }
 
     public static void solution(String s) {
@@ -39,13 +38,9 @@ public class ps {
         
         }
 
-   public static void main(String[] args) {
-       String str = scn.next();
-       solution(str);
-   }
+    public static void main(String[] args) {
+        String str = scn.next();
+        solution(str);
+    }
 
-        
-       
-    
-    
 }
