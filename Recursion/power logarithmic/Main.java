@@ -2,24 +2,25 @@ import java.util.*;
 
 public class Main {
 
-    public static int powerLog(int x, int n) {
-
-        if (n == 0) {
+    public static int  powerLog(int x, int n) {
+        
+        if(n==0)
+        {
             return 1;
         }
-
         int ans = 0;
-
-        if (n % 2 == 0) {
+       
+        if(n%2==0)
+        {
             int z = powerLog(x, n / 2);
             ans = z * z;
         }
 
         else {
             int z = powerLog(x, n / 2);
-            ans = z * z * x;
+            ans = z * z *x;
         }
-
+        
         return ans;
 
     }
@@ -30,7 +31,7 @@ public class Main {
         int x = scn.nextInt();
         int n = scn.nextInt();
 
-        System.out.println(powerLog(x, n));
+       System.out.println(powerLog(x, n)); 
 
     }
 
