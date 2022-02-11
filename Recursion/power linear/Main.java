@@ -6,9 +6,9 @@ public class Main {
 
     public static int powerLinear(int n, int x) {
         
-        if(x==1)
+        if(x==0)
         {
-            return n;
+            return 1;
         }
 
         return n * powerLinear(n, x - 1);
