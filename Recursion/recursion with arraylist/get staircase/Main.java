@@ -17,7 +17,7 @@ public class Main {
         }
 
         ArrayList<String> Myans = new ArrayList<>();
-        if(n>=0)
+        if(n-1>=0)
         {
             ArrayList<String> nm1 = gtc(n - 1);
             for(String ele:nm1)
@@ -26,7 +26,7 @@ public class Main {
             }
  
         }
-        if(n>=0)
+        if(n-2>=0)
         {
             ArrayList<String> nm2 = gtc(n - 2);
             for (String ele : nm2) {
@@ -34,7 +34,7 @@ public class Main {
             }
             
         }
-        if(n>=0)
+        if(n-3>=0)
         {
             ArrayList<String> nm3 = gtc(n - 3);
             for (String ele : nm3) {
