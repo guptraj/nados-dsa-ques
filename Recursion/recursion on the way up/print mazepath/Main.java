@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 
     public static void printMazePaths(int sr, int sc, int dr, int dc, String psf) {
