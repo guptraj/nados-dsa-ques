@@ -4,14 +4,17 @@ import java.util.*;
 public class Main {
 
     public static void printTargetSumSubsets(int[] arr, int idx, String asf, int sum, int tar) {
-        if(sum==tar)
+        if(sum>tar)
         {
-            System.out.println(asf + ".");
             return;
         }
 
         if(idx ==arr.length)
         {
+            if (sum == tar)
+            {
+                System.out.println(asf + ".");
+            }
             return;
         }
         
