@@ -1,9 +1,12 @@
 import java.util.*;
 
-// WITHOUT USING BOOLEAN ARRAY TO MARK TRUE OR FALSE 
-
+// WITH THE USE OF DIRECTIONAL ARRAY 
 
 public class Main {
+
+    static int[][] dir = { { -1, 0 }, { 0, -1 }, { 1, 0 }, { 0, 1 } };
+    static String[] dirN = { "t", "l", "d", "r" };
+
     public static void floodFill(int[][] maze, int sr, int sc, String asf) {
         if (sr > maze.length - 1 || sc > maze[0].length - 1 || sr < 0 || sc < 0 || maze[sr][sc] == 1) {
             return;
@@ -14,11 +17,12 @@ public class Main {
             return;
         }
 
-       maze[sr][sc] = 1;
-        floodFill(maze, sr - 1, sc, asf + "t");
-        floodFill(maze, sr, sc - 1, asf + "l");
-        floodFill(maze, sr + 1, sc, asf + "d");
-        floodFill(maze, sr, sc + 1, asf + "r");
+        maze[sr][sc] = 1;
+        for (int d = 0; d < dir.length; d++) {
+            int r = sr + dir[d][0];
+            int c = sc + dir[d][1];
+            floodFill(maze, r, c, asf + dirN[d]);
+        }
         maze[sr][sc] = 0;
     }
 
