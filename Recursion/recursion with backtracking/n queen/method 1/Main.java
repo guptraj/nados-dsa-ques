@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Main {
 
+    // N QUEEN USING SIMPLE FOR LOOP
+
     public static boolean isSafe(int[][] chess, int r, int c) {
 
         for (int i = r - 1, j = c - 1; i >= 0 && j >= 0; i--, j--) {
@@ -25,6 +27,12 @@ public class Main {
     }
 
     public static void printNQueens(int[][] chess, String asf, int row) {
+
+        if (row == chess.length) {
+            System.out.println(asf + ".");
+            return;
+        }
+        
         for (int col = 0; col < chess[0].length; col++) {
             if (isSafe(chess, row, col)) {
                 chess[row][col] = 1;
