@@ -10,7 +10,7 @@ public class Main {
                 if (i == 0 || j == 0)
                     dp[i][j] = 0;
                 else {
-                    int noCall = dp[i - 1][j - 1];
+                    int noCall = dp[i - 1][j];
                     int yesCall = 0;
                     if (j - wt[i - 1] >= 0) {
                         yesCall = val[i - 1] + dp[i - 1][j - wt[i - 1]];
