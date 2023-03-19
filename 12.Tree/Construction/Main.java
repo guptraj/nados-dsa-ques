@@ -54,15 +54,12 @@ public class Main{
             }
             
         }
-
+        System.out.println("Done");
     }
     public static void main(String [] args)
     {
         Scanner scn = new Scanner(System.in); 
-        int n = scn.nextInt();
-        Integer [] arr = new Integer [n];
-        for(int i=0;i<n;i++) arr[i] = scn.nextInt();
+        Integer [] arr = {1, 2, 4, null ,null ,5, null, null, 3, 6, null, null, 7, null, null };
         binaryTreeCons(arr);
-
     }
 }
