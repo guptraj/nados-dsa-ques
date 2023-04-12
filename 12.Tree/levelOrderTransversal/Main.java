@@ -37,4 +37,19 @@ public class Main {
         }
 
     }
+
+    // third approch
+    public static void levelOrder3(Node root){
+        Queue<Node> qu = new LinkedList<>();
+        qu.add(root);
+        while(qu.size()>0){
+            int size = qu.size();
+            while(size-- >0){
+                Node top = qu.remove();
+                System.out.print(top.data +" ");
+                if(root.left!=null) qu.add(root.left);
+                if(root.right!=null) qu.add(root.right);
+            }
+        }
+    }
 }
