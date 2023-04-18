@@ -45,16 +45,13 @@ public class Main {
     }
 
     public static int size(Node root) {
-        // write your code here
-        if (root == null)
-            return 0;
+        
         int size = 0;
-        for (int i = 0; i < root.children.size() - 1; i++) {
-            size += size(root.children[i]);
+        for (int i = 0; i < root.children.size(); i++) {
+            size += size(root.children.get(i));
 
         }
-        size += 1;
-        return size;
+                return size+1;
     }
 
     public static void main(String[] args) throws Exception {
