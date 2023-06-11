@@ -79,43 +79,12 @@ public class Main {
     display(node.right);
   }
 
-  public static int height(Node node) {
-    if (node == null) {
-      return -1;
-    }
-
-    int lh = height(node.left);
-    int rh = height(node.right);
-
-    int th = Math.max(lh, rh) + 1;
-    return th;
+  public static Node removeLeaves(Node root){
+      if (root == null)
+          return null;
+      
   }
 
- public static class pairBST{
-    boolean bst;
-    int max;
-    int min;
-    pairBST(){}
-    pairBST(boolean bst,int min,int max){
-        this.bst=bst;
-        this.max=max;
-        this.min=min;
-    }
- }
- public static pairBST isBST(Node root){
-    if(root==null){
-       return new pairBST(true,Integer.MAX_VALUE,Integer.MIN_VALUE);
-    }
-    pairBST lans= isBST(root.left);
-    pairBST rans= isBST(root.right);
-    pairBST ans = new pairBST();
-    ans.bst= lans.bst && rans.bst && lans.max<root.data && root.data<rans.min;
-    ans.min= Math.min(root.data,lans.max);
-    ans.max= Math.max(root.data,rans.min);
-    return ans;
-    
- }
-  
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int n = Integer.parseInt(br.readLine());
@@ -130,9 +99,8 @@ public class Main {
     }
 
     Node root = construct(arr);
-    pairBST ans = new pairBST();
-    ans=isBST(root);
-    System.out.println(ans.bst) ;
+    root = removeLeaves(root);
+    display(root);
   }
 
 }
